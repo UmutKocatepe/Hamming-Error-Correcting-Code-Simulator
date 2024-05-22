@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamming Error Correcting Code Simulator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f8ff;
+        color: #333;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+      }
+      h1 {
+        color: #0066cc;
+      }
+      .input-section,
+      .output-section {
+        margin-bottom: 20px;
+      }
+      .input-section label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .input-section input,
+      .output-section span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .input-section button,
+      .output-section button {
+        background: #0066cc;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .input-section button:hover,
+      .output-section button:hover {
+        background: #005bb5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hamming Error Correcting Code Simulator</h1>
+    <div class="input-section">
+      <label for="bitCount"
+        >Hamming kodu hesaplanacak verinin bit sayısını seçiniz (4, 8 veya 16):
+      </label>
+      <input type="number" id="bitCount" min="4" max="16" step="4" />
+      <button onclick="generateInputFields()">Veri Bitlerini Gir</button>
+    </div>
+    <div class="input-section" id="dataInputSection" style="display: none">
+      <p>Veri bitlerini sirasiyla giriniz:</p>
+      <div id="dataInputs"></div>
+      <button onclick="calculateHammingCode()">Hamming Kodunu Hesapla</button>
+    </div>
+    <div class="output-section" id="outputSection" style="display: none">
+      <p>Hamming Kodu: <span id="hammingCode"></span></p>
+      <p>Yapay Hatali Kod: <span id="faultyCode"></span></p>
+      <p>Hatali Pozisyon: <span id="errorPosition"></span></p>
+      <p>Düzeltilmiş Kod: <span id="correctedCode"></span></p>
+    </div>
+    <script src="hamming.js"></script>
+  </body>
+</html>
