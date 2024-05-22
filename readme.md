@@ -12,7 +12,7 @@ Bu proje, Hamming kodu hesaplamak ve hataları tespit edip düzeltmek için bir 
 ## Ekran Görüntüleri
 
 ![4 Bit](photo1.jpg)
-![8 Bit](photo2.jgp)
+![8 Bit](photo2.jpg)
 ![16 Bit](photo3.jpg)
 
 
